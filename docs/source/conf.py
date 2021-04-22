@@ -22,7 +22,6 @@ sys.path.insert(0, os.path.abspath('../../'))
 # -- Project information -----------------------------------------------------
 
 project = 'pyrawr'
-copyright = '2020, RalfG'
 author = 'RalfG'
 github_project_url = "https://github.com/ralfg/pyrawr/"
 github_doc_root = 'https://github.com/ralfg/pyrawr/tree/master/docs/'

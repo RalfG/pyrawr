@@ -1,4 +1,4 @@
-"""Wrapper around the ThermoRawFileParser command line interface."""
+"""Python wrapper around the ThermoRawFileParser command line interface."""
 
 import json
 import os
@@ -128,7 +128,7 @@ class ThermoRawFileParser:
         with tempfile.TemporaryDirectory() as tmp_dir:
             output_file = os.path.join(tmp_dir, "meta.json")
             cmd_options = ["-i", input_file, "-c", output_file, "-m", "0"]
-            cmd_out = self._run_command(cmd_options, files=[input_file, output_file])
+            _ = self._run_command(cmd_options, files=[input_file, output_file])
             with open(output_file) as f:
                 metadata = json.load(f)
         return metadata
@@ -200,7 +200,8 @@ class ThermoRawFileParser:
         self.installed_version = cmd_out.stdout.decode().strip()
         if not semver.match(self.installed_version, self.version_requirement):
             raise ThermoRawFileParserInstallationError(
-                f"Installed version {self.installed_version} does not match requirement {self.version_requirement}"
+                f"Installed version {self.installed_version} does not match "
+                f"requirement {self.version_requirement}"
             )
 
     def _run_command(self, options, files=None, check=True):

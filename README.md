@@ -11,20 +11,27 @@ Python wrapper around the
 [ThermoRawFileParser](https://github.com/compomics/ThermoRawFileParser)
 command line interface.
 
+This Python module uses the ThermoRawFileParser CLI to retrieve general run metadata, specific spectra, or specific XICs, directly as Python lists and dictionaries from
+mass spectrometry raw files. Parsing raw files to other file formats is also supported.
+
 
 ---
 
 
 ## Installation
 
-Install pyrawr with pip
+- Install pyrawr with pip
 
-```sh
-$ pip install pyrawr
-```
+   ```sh
+   $ pip install pyrawr
+   ```
 
-Install [ThermoRawFileParser](https://github.com/compomics/ThermoRawFileParser) or
+- Install [ThermoRawFileParser](https://github.com/compomics/ThermoRawFileParser) or
 Docker.
+
+For Docker, the current user must be
+[added to the Docker group](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user),
+that is, be callable as `docker run`, instead of `sudo docker run`.
 
 
 ## Usage
@@ -92,7 +99,8 @@ request! See
 for more info.
 
 This module currently uses Python's `subprocess.run()` to access ThermoRawFileParser.
-There are probably much better methods to do this. Suggestions and PRs are always
+There are probably much better methods that would directly access the
+ThermoRawFileParser library, circumventing the CLI. Suggestions and PRs are always
 welcome.
 
 

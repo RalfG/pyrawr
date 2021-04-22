@@ -3,5 +3,4 @@ numpydoc>=1,<2
 recommonmark
 m2r
 
-jsonschema>=3,<4
-toml
+semver>=2
