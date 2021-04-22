@@ -2,5 +2,6 @@ sphinx>=3,<4
 numpydoc>=1,<2
 recommonmark
 m2r
+toml
 
-semver>=2
+semver>=3
