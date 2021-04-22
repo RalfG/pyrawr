@@ -4,4 +4,4 @@ recommonmark
 m2r
 toml
 
-semver>=3
+semver>=2
