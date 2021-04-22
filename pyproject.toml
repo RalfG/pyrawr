@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "pyrawr"
+version = "0.1.0"
+description = "Python wrapper around the ThermoRawFileParser command line interface"
+authors = ["Ralf Gabriels <ralf@gabriels.dev>"]
+license = "Apache-2.0"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+semver = ">=2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
