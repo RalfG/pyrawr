@@ -3,6 +3,10 @@ name = "pyrawr"
 version = "0.1.0"
 description = "Python wrapper around the ThermoRawFileParser command line interface"
 authors = ["Ralf Gabriels <ralf@gabriels.dev>"]
+readme = "README.md"
+repository = "https://github.com/ralfg/pyrawr"
+documentation = "https://pyrawr.readthedocs.io/"
+keywords = ["ThermoRawFileParser", "mass spectrometry", "proteomics", "raw"]
 license = "Apache-2.0"
 
 [tool.poetry.dependencies]
